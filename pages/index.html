@@ -1,0 +1,456 @@
+<!--Αυτός ο κώδικας HTML δημιουργεί μια ιστοσελίδα για ένα καφέ-πολυχώρο που ονομάζεται Swissblade-->
+
+<!--Δ΄ήλωση του τύπου του εγγράφου HTML-->
+<!DOCTYPE html>
+<html>
+
+<!--Γενικές πληροφορίες σχετικές με το έγγραφο (τίτλος, κωδικοποίηση, σύνδεσμοι προς εξωτερικά αρχεία CSS και γραμματοσειρές Google)
+    Χρησιμοποιούνται 2 αρχεία css ανάλογα με το μ΄έγεθος της οθόνης για να επιτευχθεί ανταποκρινόμενη σχεδίαση
+    Επιπλέον, εισάγεται πηγή με kit για font icons που θα χρησιμοποιηθούν-->
+<head lang="en">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width" />
+    <title>Swissblade - Coffee&More</title>
+    <link rel="stylesheet" href="../stylesheet/mobile.css" media="screen and (max-width:599px)" />
+    <link rel="stylesheet" href="../stylesheet/desktop.css" media="screen and (min-width:600px)" />
+    <link href='https://fonts.googleapis.com/css?family=Coda' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/9140fda913.js" crossorigin="anonymous"></script>
+</head>
+
+<!--Το κύριο περιεχόμενο της ιστοσελίδας-->
+<body>
+    <!--Η ενότητα header περιλαμβάνει τον τίτλο και μια σύντομη περιγραφή του καφέ-->
+    <header>
+        <button><a href="../includes/logout.php">Log out</a></button>
+        <h1>Swissblade</h1>
+        <h2>Not your average bookstore cafe</h2>
+        <p>A multi-verse experience in the heart of Athens</p>
+    </header>
+
+    <!--Η ενότητα nav περιλαμβάνει το μενού πλοήγησης με σύνδεσμους προς τις διάφορες ενότητες της ιστοσελίδας-->
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li>
+                <!-- Χρήση της ετικέτας details και summary για δημιουργία αναπτυσσόμενου μενού-->
+                <details>
+                    <summary><a href="#about">About Us</a></summary>
+                    <div id="det1">
+                        <p><a href="#lounge">Main area</a></p>
+                        <p><a href="#avli">Courtyard</a></p>
+                        <p><a href="#lib">Library</a></p>
+                        <p><a href="#open">Open Hours</a></p>
+                        <p><a href="#menu">Menu</a></p>
+                    </div>
+                </details>
+            </li>
+            <li>
+                <details>
+                    <summary><a href="#events">Events</a></summary>
+                    <div id="det2">
+                        <p><a href="#event1">Movie night</a></p>
+                        <p><a href="#event2">Wine Tasting Class</a></p>
+                        <p><a href="#event3">Espresso Basics class</a></p>
+                        <p><a href="#form">Book your seat</a></p>
+                    </div>
+                </details>
+            </li>                
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!--Η main είναι η κύρια ενότητα της ιστοσελίδας και φιλοξενεί ενότητες που σχετίζονται με τις λεπτομέρειες της επιχείρησης-->
+    <main>
+         <!-- Η ενότητα bar-img περιλαμβάνει μια εικόνα του μπαρ με σχετική λεζάντα και δύο aside -->
+        <section class="bar-img">
+            <figure>
+                <img src="../images/bar.jpg" alt="bar-img"></br>
+                <figcaption>The Swissblade bar - the place where the magic starts</figcaption>
+            </figure>
+            <div class="aside-space">
+                <aside>
+                    <h5>Orbit around coffee</h5>
+                    <p>In a coffee universe, each cup is a cosmic journey that orbits around crafted brews and rich flavors</p>
+                </aside>
+                <aside>
+                    <h5>Ask the bar</h5>
+                    <p>to guide you through:</p>
+                    <ul>
+                        <li>Our featured blends</li>
+                        <li>Different brewing techniques</li>
+                        <li>Season specials</li>
+                    </ul>
+                </aside>
+            </div>
+        </section>
+
+         <!-- Η ενότητα about περιλαμβάνει μια περίληψη για την ιστορία και τη φιλοσοφία του Swissblade-->
+        <section class="about">
+            <h3 id="about">About Us</h3>
+            <p>Welcome to our vibrant multi-verse, where dreams and caffeine collide in a symphony of creativity!
+            </br>Our story dates back to a small university room - between some laughs and the aroma of freshly brewed coffee, the seed was planted.
+            </br>Imagine a place where the hum of conversation harmonizes with the clinking of mugs, study nooks write their own stories,
+            </br>art hangs on the walls, and our backyard transforms into a stage under the summer sky!
+            </br>And the idea came to life in 2022 right in the heart of Athens.
+            </br>Join us for a sip, a study, and a story!
+            </p>
+        <!--Η ενότητα lounge περιλαμβάνει πληροφορίες για τον κύριο χωρο του καφέ. Περιλαμβάνει εικόνα και division με κείμενο, καθώς και aside με animation-->
+        <section class="lounge">
+            <img src="../images/lounge.jpg" alt="lounge-img">  
+            <div class="lounge-txt">
+                <h4 id="lounge">Main Area</h4>
+                <p>The main area beckons with a charming vintage aesthetic,
+                </br>where weathered wood, muted tones, and classic furnishings create a nostalgic ambiance,
+                </br>inviting patrons to savor their moments in a bygone era of timeless elegance.
+                </p>
+            </div>
+            <aside id="animate">
+                <i class="fa-solid fa-mug-hot"></i>
+                <i class="fa-solid fa-mug-hot"></i>
+                <i class="fa-solid fa-mug-hot"></i>
+                <i class="fa-solid fa-mug-hot"></i>
+                <i class="fa-solid fa-mug-hot"></i>
+                <i class="fa-solid fa-mug-hot"></i>
+                <i class="fa-solid fa-mug-hot"></i>
+                <i class="fa-solid fa-mug-hot"></i>
+                </aside>
+        </section>
+        <!--Η ενότητα avli περιλαμβάνει πληροφορίες για την αυλή του καφέ. Περιλαμβάνει εικόνα και division με κείμενο, καθώς και aside με animation-->        
+        <section class="avli">
+            <aside id="animate2">
+                <i class="fa-solid fa-mug-hot"></i>
+                <i class="fa-solid fa-mug-hot"></i>
+                <i class="fa-solid fa-mug-hot"></i>
+                <i class="fa-solid fa-mug-hot"></i>
+                <i class="fa-solid fa-mug-hot"></i>
+                <i class="fa-solid fa-mug-hot"></i>
+            </aside>
+            <div class="avli-txt">
+                <h4 id="avli">Courtyard</h4>
+                <p>Do you love the sunny weekend brunch
+                </br>or some interesting movies and freshly popped popcorn?
+                </br>Then the Courtyard is the place for you!
+                </br>It plays host to an array of <a href="#events">events</a> spanning from soulful live music sessions and movie nights to engaging wine lectures
+                </p>
+            </div>
+            <img src="../images/courtyard.jpeg" alt="courtyard-img">   
+        </section>
+        <!--Η ενότητα lib περιλαμβάνει πληροφορίες για τη βιβλιοθήκη του καφέ. Περιλαμβάνει εικόνα και division με κείμενο, καθώς και aside με animation-->    
+        <section class="lib">
+            <img src="../images/bookcase.jpg" alt="bookcase-img">   
+            <div class="lib-txt">
+                <h4 id="lib">Library</h4>
+                <p>Nestled in the quiet corner of our space, the library room whispers a serene invitation to seekers of knowledge.
+                </br>Offering a variety of up to 800 titles the library is the perfect place for those who want a journey through philoshopy,evolutionary biology, phsycology and more
+                </p>   
+            </div>
+            <aside id="animate3">
+                <i class="fa-solid fa-mug-hot"></i>
+                <i class="fa-solid fa-mug-hot"></i>
+                <i class="fa-solid fa-mug-hot"></i>
+                <i class="fa-solid fa-mug-hot"></i>
+                <i class="fa-solid fa-mug-hot"></i>
+                <i class="fa-solid fa-mug-hot"></i>
+            </aside>
+        </section>
+        </section>
+
+        <!--Η ενότητα open-hours περιλαμβάνει πίνακα με τις ώρες λειτουργίας της επιχείρησης-->
+        <section class="open-hours">
+            <h4 id="open">Open Hours</h4>
+            <table id="hours_table">
+                <caption>It's Swissblade o'clock!</caption>
+                <tr>
+                    <th><img src="../images/hourglass.jpg" alt="" width="25%" height="auto"></th>
+                    <th>Monday</th>
+                    <th>Tuesday</th>
+                    <th>Wednesday</th>
+                    <th>Thursday</th>
+                    <th>Friday</th>
+                    <th>Saturday</th>
+                    <th>Sunday</th>
+                </tr>
+                <tr>
+                    <td>Morning</td>
+                    <td>9:00 am - 5:00 pm</td>
+                    <td><img src="../images/closed.png" alt="" width="25%" height="auto"></td>
+                    <td>9:00 am - 5:00 pm</td>
+                    <td>9:00 am - 5:00 pm</td>
+                    <td>9:00 am - 5:00 pm</td>
+                    <td>9:00 am - 5:00 pm</td>
+                    <td>10:00 am - 1:00 pm</td>
+                </tr>
+                <tr>
+                    <td>Afternoon/</br>Evening</td>
+                    <td>6:00 pm - 2:00 am</td>
+                    <td>6:00 pm - 2:00 am</td>
+                    <td>6:00 pm - 2:00 am</td>
+                    <td>6:00 pm - 2:00 am</td>
+                    <td>6:00 pm - 2:00 am</td>
+                    <td>6:00 pm - 2:00 am</td>
+                    <td>5:00 pm - 12:00 am</td>
+                </tr>
+            </table>
+        </section>
+
+        <!--Η ενότητα menu περιλαμβάνει πίνακες με το μενού ροφημάτων/φαγητού και τις τιμές τους-->
+        <section class="menu">
+            <h4 id="menu">Menu</h4>
+            <div id="menu_div">
+                <table class="menu_tables">
+                    <caption>~ Coffee Menu ~</caption>
+                    <tr colspan="3">
+                        <th colspan="3">Blends</th>
+                    </tr>
+                    <tr>
+                        <td rowspan="3"><i class="fa-solid fa-mug-saucer"></i></td>
+                        <td>Espresso Blend</td>
+                        <td>2.50€</td>
+                    </tr>
+                    <tr colspan="3">
+                        <td>House Blend</td>
+                        <td>3.00€</td>
+                    </tr>
+                    <tr>
+                        <td>Signature Blend</td>
+                        <td>3.50€</td>
+                    </tr>
+                    <tr>
+                        <th colspan="3">Single Origin</th>
+                    </tr>
+                    <tr>
+                        <td rowspan="3"><i class="fa-solid fa-mug-hot"></i></td>
+                        <td>Ethiopian Yirgacheffed</td>
+                        <td>4.00€</td>
+                    </tr>
+                    <tr>
+                        <td>Colombian Supremo</td>
+                        <td>3.50€</td>
+                    </tr>
+                    <tr>
+                        <td>Brazilian Santos</td>
+                        <td>3.00€</td>
+                    </tr>
+                    <tr>
+                        <th colspan="3">Other Beverages</th>
+                    </tr>
+                    <tr>
+                        <td rowspan="5"><i class="fa-solid fa-martini-glass-citrus"></i></td>
+                        <td>Tea</td>
+                        <td>2.00€</td>
+                    </tr>
+                    <tr>
+                        <td>Hot Chocolate</td>
+                        <td>3.50€</td>
+                    </tr>
+                    <tr>
+                        <td>Iced Coffee</td>
+                        <td>3.50€</td>
+                    </tr>
+                    <tr>
+                        <td>Fruit Smoothie</td>
+                        <td>4.00€</td>
+                    </tr>
+                    <tr>
+                        <td>Fresh Juice</td>
+                        <td>3.00€</td>
+                    </tr>          
+                </table>
+                <table class="menu_tables">
+                    <caption>~ Brunch Menu ~</caption>
+                    <tr>
+                        <th colspan="3">Main Courses</th>
+                    </tr>
+                    <tr>
+                        <td rowspan="3"><i class="fa-solid fa-utensils"></i></td>
+                        <td>Avocado Toast</td>
+                        <td>7.00€</td>
+                    </tr>
+                    <tr>
+                        <td>Eggs Benedict</td>
+                        <td>8.00€</td>
+                    </tr>
+                    <tr>
+                        <td>Pancake Stack</td>
+                        <td>6.50€</td>
+                    </tr>
+                    <tr>
+                        <th colspan="3">Sandwiches</th>
+                    </tr>
+                    <tr>
+                        <td rowspan="3"><i class="fa-solid fa-burger"></i></td>
+                        <td>Classic BLT</td>
+                        <td>7.50€</td>
+                    </tr>
+                    <tr>
+                        <td>Smoked Salmon Bagel</td>
+                        <td>9.50€</td>
+                    </tr>
+                    <tr>
+                        <td>Veggie Wrap</td>
+                        <td>6.60€</td>
+                    </tr>
+                    <tr>
+                        <th colspan="3">Sides</th>
+                    </tr>
+                    <tr>
+                        <td rowspan="3"><i class="fa-solid fa-apple-whole"></i></td>
+                        <td>French Fries</td>
+                        <td>3.50€</td>
+                    </tr>
+                    <tr>
+                        <td>Mixed Fruit Bowl</td>
+                        <td>4.50€</td>
+                    </tr>
+                    <tr>
+                        <td>Greek Yogurt Parfait</td>
+                        <td>5.30€</td>
+                    </tr>
+                    <tr>
+                        <th colspan="3">Sweet Treats</th>
+                    </tr>
+                    <tr>
+                        <td rowspan="5"><i class="fa-solid fa-ice-cream"></i></td>
+                        <td>Homemade Apple Pie</td>
+                        <td>3.50€</td>
+                    </tr>
+                    <tr>
+                        <td>Homemade Orange Tart</td>
+                        <td>4.00€</td>
+                    </tr>
+                    <tr>
+                        <td>Cheesecake</td>
+                        <td>4.50€</td>
+                    </tr>
+                    <tr>
+                        <td>Chocolate Brownie</td>
+                        <td>3.00€</td>
+                    </tr>
+                    <tr>
+                        <td>Tiramisu</td>
+                        <td>5.00€</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+        
+        <!--Η ενότητα events έχει μια περιγραφή για τις επερχ΄΄ομενες εκδηλώσεις στο καφέ-->    
+        <section class="events">
+            <h3 id="events">Events</h3>
+            <p>Explore the upcoming happenings at Swissblade.</p>
+            <p>From live music to engaging discussions, there's always something new to discover in our cozy space</p>
+            <p>Stay tuned!</p>
+
+            <!--Η ενότητα events-info φιλοξενεί λεπτομ΄ρειες για τις επερχ΄΄ομενες εκδηλώσεις στο καφέ. Περιλαμβάνει τρία div, ένα για κάθε event
+            Κάθε div έχει τ΄ίτλο, ημερομηνία και ώρα, σύντομη περιγραφή και εικόνα--->
+            <section class="events-info">
+                <div class="event1">
+                    <h4 id="event1">La haine(1995)</h4>
+                    <p>Director: Mathieu Kassovitz</p>
+                    <h5><time datetime="2023-11-21T21:00:">November 21st, 9 pm</time></h5>
+                    <p>"How you fall doesn't matter. It's how you land!"
+                    </br>An all-time-classic for the season's last movie night. Grab a bag of popcorn and a blanket at the entrance! </p>
+                    <img src="../images/movie.jpg" alt="film-reel-img" class="movie-img">    
+                </div> 
+                <div class="event2">
+                    <h4 id="event2">All About Wine</h4>
+                    <h5><time datetime="2023-12-03T19:30:">December 3rd, 7.30 pm</time></h5>
+                    <p>Crafted for simplicity,we are about to explore the essence of each pour, appreciating the subtleties that make each bottle unique</p>
+                    <img src="../images/wine.jpg" alt="wine-img" class="wine-img">    
+                </div>
+                <div class="event3">
+                    <h4 id="event3">Bean Chronicles: Espresso Edition</h4>
+                    <h5><time datetime="2023-12-16T18:00:">December 16th, 6 pm</time></h5>
+                    <p>From bean to cup there's a long story - our experienced speaker guide as through a journey of origins, tastes and specialities</p>
+                    <img src="../images/coffee_beans.jpg" alt="coffee-beans-img" class="beans-img">    
+                </div>                           
+            </section>
+        </section>
+        <!--Η ενότητα form περιλαμβάνει μια φόρμα κράτησης θέσης για τις διάφορες εκδηλώσεις με στοιχεία 
+            επωνυμο, όνομα, επιλογή εκδήλωσης, email, τηλεφωνο και συναίνεση χρήσης των στοιχείων -->
+        <section id="form">
+            <form method="POST" action="insert.php" enctype="multipart/form-data">
+                <fieldset class="form-info">
+                    <legend>  Book your seat  </legend>
+                    <p>
+                        <label>Last name: </label>
+                        <input type="text" placeholder="enter your lastname" name="lastname" required/>
+                    </p>
+                    <p>
+                        <label>First name: </label>
+                        <input type="text" placeholder="enter your firstname" name="firstname" />
+                    </p>
+                    <p>
+                        <label>Event: </label>
+                        <select name="event" required>
+                            <option value="" selected disabled>Select event</option>
+                            <option>Movie night</option>
+                            <option>Wine Tasting Class</option>
+                            <option>Espresso Basics class</option>
+                        </select>
+                    </p>
+                    <p>
+                        <label>Email: </label>
+                        <input type="text" placeholder="someone@example.com" name="mail" />
+                    </p>
+                    <p>
+                        <label>Tel: </label>
+                        <input type="text" placeholder="+30 69xxxxxxxx" name="phone" required/>
+                    </p>
+                    <p>
+                        <label>Number of people: </label>
+                        <input type="number" min="1" max="15" name="no" required/>
+                    </p>
+                    <p>
+                        <label>Upload Coupon File: </label>
+                        <input type="file" name="file1">
+                    </p>
+                    <p>
+                        <label>I agree with the processing of personal data: </label></br>
+                        <input type="checkbox" name="agreement" required>I agree
+                    </p>
+                    <input type="submit">
+                    <input type="reset">
+                </fieldset>
+            </form>
+        </section>
+
+        <!--Η ενότητα gallery περιλαμβάνει μια σειρά από εικόνες σχετικές με τους χ΄ώρους τις επιχείρησης-->
+        <section class="gallery">
+            <h3 id="gallery">Gallery</h3>    
+            <div class="gallery-grid">
+                <img src="../images/lounge.jpg" alt="lounge-img"> 
+                <img src="../images/courtyard.jpeg" alt="courtyard-img">
+                <img src="../images/bookcase.jpg" alt="bookcase-img"> 
+                <img src="../images/bar.jpg" alt="bar-img"> 
+                <img src="../images/coffee.jpg" alt="coffee-img">
+                <img src="../images/cheese_plato.jpg" alt="cheese-plato-img">
+                <img src="../images/corner.jpg" alt="corner-img">
+            </div>
+        </section>
+
+        <!--Η ενότητα contact περιλαμβάνει τα στοιχεία επικοινωνίας (τηλέφωνο, σύνδεσμο για αποστολή email, facebook και την playlist της εβδομάδας στο Spotify)
+            καθώς επίσης και σχετικά εικονίδια για τα μέσα-->
+        <section class="contact">
+            <h3 id="contact">Contact</h3>
+            <p><img src="../images/tel.png" alt="tel-icon" class="tel">:   210-111-11111</p>
+            <p><img src="../images/gmail.png" alt="gmail-icon" class="mail">:  <a href=mailto:"vsforou@gmail.com">Email us</a></p>
+            <p><img src="../images/facebook_32.png" alt="facebook-icon" class="fb">:  <a href="http://www.facebook.com">Fb page</a></p>
+            <p><img src="../images/spotify.png" alt="spotify-icon" class="spotify">: <a href="https://open.spotify.com/playlist/2Blo8H5lkpUcf4SCoI89sm?si=6302977d48c54c57">Week's playlist</a></p>    
+        </section>
+    </main>
+
+    <!--Η ενότητα footer περιλαμβάνει μια σειρά σύνδεσμους προς τις διάφορες ενότητες της ιστοσελίδας-->
+    <footer>
+        <p><a href="#">Home</a></p>
+        <p><a href="#about">About Us</a></p>
+        <p><a href="#events">Events</a></p>
+        <p><a href="#gallery">Gallery</a></p>     
+    </footer>
+
+    <!--Εισαγωγή στοιχείου για πνευματικά δικαιώματα-->
+    <p class="copyrights">&copy; 2024 Swissblade. All rights reserved.</p>  
+</body>
+
+</html>
