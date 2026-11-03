@@ -54,11 +54,10 @@ A local PHP + MySQL environment such as [XAMPP](https://www.apachefriends.org/) 
    git clone https://github.com/vassfor/webpage.git
    ```
 2. Start Apache and MySQL.
-3. In phpMyAdmin, create two databases named `db1` and `db2`.
-4. Import `databases/db1.sql` into `db1` and `databases/db2.sql` into `db2`.
-5. If your MySQL credentials differ from the XAMPP defaults (`root` with an empty password), update `databases/connect.php` and `databases/connect2.php`.
-6. Make sure the `uploads/` folder is writable by the web server.
-7. Open `http://localhost/webpage/loginpage.php` in your browser.
+3. Open phpMyAdmin (`http://localhost/phpmyadmin`), go to the **Import** tab and import `databases/db1.sql` and `databases/db2.sql`, one after the other. They create the `db1` and `db2` databases and their tables automatically.
+4. If your MySQL credentials differ from the XAMPP defaults (`root` with an empty password), update `databases/connect.php` and `databases/connect2.php`.
+5. Make sure the `uploads/` folder is writable by the web server.
+6. Open `http://localhost/webpage/loginpage.php` in your browser.
 
 ## Usage
 
