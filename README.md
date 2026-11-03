@@ -23,8 +23,8 @@ PHP · MySQL (MySQLi) · HTML5 · CSS3 · Font Awesome · Google Fonts
 ├── databases/
 │   ├── connect.php      # Connection to the `db1` database (bookings)
 │   ├── connect2.php     # Connection to the `db2` database (users)
-│   ├── db1.sql          # Schema: BOOKINGS table
-│   └── db2.sql          # Schema: users table
+│   ├── db1.sql          # Creates the db1 database and the BOOKINGS table
+│   └── db2.sql          # Creates the db2 database and the users table
 ├── images/              # Site images and icons
 ├── includes/
 │   ├── login.inc.php    # Login handler
