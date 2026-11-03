@@ -1,0 +1,15 @@
+# Uploaded files (keep the folder and its note)
+uploads/*
+!uploads/coupons.pdf
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editors / IDEs
+.vscode/
+.idea/
+
+# Local config and logs
+*.log
+.env
